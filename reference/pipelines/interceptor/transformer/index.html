@@ -1,0 +1,2914 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Loggie Documentation">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/min-logo.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-7.2.5">
+    
+    
+      
+        <title>transformer -  </title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.be71726b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7CRobot+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"";--md-code-font-family:"Robot Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#transformer" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title=" " class="md-header__button md-logo" aria-label=" " data-md-component="logo">
+      
+  <img src="../../../../assets/loggie.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+             
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              transformer
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="https://loggie-io.github.io/docs/" hreflang="cn" class="md-select__link">
+                    中文
+                  </a>
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/loggie-io/loggie" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    loggie-io/loggie
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../getting-started/overview/" class="md-tabs__link">
+        Quick Start
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../user-guide/" class="md-tabs__link">
+        User Guide
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../" class="md-tabs__link md-tabs__link--active">
+        Configurations
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../developer-guide/contributing/" class="md-tabs__link">
+        Contributing
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title=" " class="md-nav__button md-logo" aria-label=" " data-md-component="logo">
+      
+  <img src="../../../../assets/loggie.svg" alt="logo">
+
+    </a>
+     
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/loggie-io/loggie" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    loggie-io/loggie
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Quick Start
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Quick Start" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Quick Start
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../getting-started/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../getting-started/intro/core-concept/" class="md-nav__link">
+        Core Concepts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      <label class="md-nav__link" for="__nav_2_3">
+        Quick Start
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Quick Start" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Quick Start
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../getting-started/quick-start/quick-start/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../getting-started/quick-start/kubernetes/" class="md-nav__link">
+        Kubernetes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../getting-started/quick-start/node/" class="md-nav__link">
+        Host
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      <label class="md-nav__link" for="__nav_2_4">
+        Deploy
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../getting-started/install/kubernetes/" class="md-nav__link">
+        Kubernetes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../getting-started/install/node/" class="md-nav__link">
+        Host
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+      
+      <label class="md-nav__link" for="__nav_2_5">
+        RoadMap
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="RoadMap" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          RoadMap
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../getting-started/roadmap/roadmap-2023/" class="md-nav__link">
+        2023
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        User Guide
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="User Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          User Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        Architecture and Features
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Architecture and Features" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Architecture and Features
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/architecture/background/" class="md-nav__link">
+        Background
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/architecture/core-arch/" class="md-nav__link">
+        Philosophy
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/architecture/schema/" class="md-nav__link">
+        Data Format
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/architecture/advantages/" class="md-nav__link">
+        Advantages and Features
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/architecture/compare/" class="md-nav__link">
+        Progress and Tests
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        Kubernetes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Kubernetes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Kubernetes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/use-in-kubernetes/general-usage/" class="md-nav__link">
+        Collect Logs in Kubernetes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/use-in-kubernetes/collect-container-logs/" class="md-nav__link">
+        Collect Container Logs
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/use-in-kubernetes/collect-node-logs/" class="md-nav__link">
+        Collect Node Logs
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/use-in-kubernetes/sidecar/" class="md-nav__link">
+        Sidecar Mode
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/use-in-kubernetes/kube-event-source/" class="md-nav__link">
+        Collect Kubernetes Events
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      <label class="md-nav__link" for="__nav_3_4">
+        Best Practices
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Best Practices" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Best Practices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/best-practice/log-enrich/" class="md-nav__link">
+        Log Format and Metadata
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/best-practice/log-process/" class="md-nav__link">
+        Log Segmentation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/best-practice/aggregator/" class="md-nav__link">
+        Loggie Aggregator
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      <label class="md-nav__link" for="__nav_3_5">
+        Monitor and Alerm
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Monitor and Alerm" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Monitor and Alerm
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/monitor/loggie-monitor/" class="md-nav__link">
+        Monitoring and Alarming for Loggie
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/monitor/service-log-alarm/" class="md-nav__link">
+        Log Alert
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" >
+      
+      <label class="md-nav__link" for="__nav_3_6">
+        Enterprise Practices
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Enterprise Practices" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          Enterprise Practices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/enterprise-practice/architecture-and-evolution/" class="md-nav__link">
+        Logging System Architecture and Evolution
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/enterprise-practice/sls/" class="md-nav__link">
+        Using Alibaba SLS Sink
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" type="checkbox" id="__nav_3_7" >
+      
+      <label class="md-nav__link" for="__nav_3_7">
+        Maintenance and Troubleshooting
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Maintenance and Troubleshooting" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          Maintenance and Troubleshooting
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/troubleshot/log-collection/" class="md-nav__link">
+        Troubleshooting Quick Guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/troubleshot/problems/" class="md-nav__link">
+        Cases
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        Configurations
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Configurations" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Configurations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../global/args/" class="md-nav__link">
+        Start Arguments
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../global/var/" class="md-nav__link">
+        Field Variable
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      <label class="md-nav__link" for="__nav_4_4">
+        System Configuration
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="System Configuration" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          System Configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../global/monitor/" class="md-nav__link">
+        monitor
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../global/discovery/" class="md-nav__link">
+        discovery
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../global/reload/" class="md-nav__link">
+        reload
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../global/defaults/" class="md-nav__link">
+        defaults
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../global/http/" class="md-nav__link">
+        http
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      <label class="md-nav__link" for="__nav_4_5">
+        Kubernetes CRD
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Kubernetes CRD" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Kubernetes CRD
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../discovery/kubernetes/logconfig/" class="md-nav__link">
+        LogConfig
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../discovery/kubernetes/clusterlogconfig/" class="md-nav__link">
+        ClusterLogConfig
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../discovery/kubernetes/sink/" class="md-nav__link">
+        Sink
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../discovery/kubernetes/interceptors/" class="md-nav__link">
+        Interceptor
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+      
+      <label class="md-nav__link" for="__nav_4_6">
+        Source
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Source" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          Source
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../source/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../source/file/" class="md-nav__link">
+        file
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../source/kafka/" class="md-nav__link">
+        kafka
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../source/kube-event/" class="md-nav__link">
+        kubeEvent
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../source/grpc/" class="md-nav__link">
+        grpc
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../source/prometheus-exporter/" class="md-nav__link">
+        prometheusExporter
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../source/unix/" class="md-nav__link">
+        unix
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../source/dev/" class="md-nav__link">
+        dev
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7" type="checkbox" id="__nav_4_7" >
+      
+      <label class="md-nav__link" for="__nav_4_7">
+        Sink
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Sink" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Sink
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sink/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sink/elasticsearch/" class="md-nav__link">
+        elasticsearch
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sink/kafka/" class="md-nav__link">
+        kafka
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sink/loki/" class="md-nav__link">
+        loki
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sink/grpc/" class="md-nav__link">
+        grpc
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sink/file/" class="md-nav__link">
+        file
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sink/dev/" class="md-nav__link">
+        dev
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sink/sls/" class="md-nav__link">
+        sls
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_8" type="checkbox" id="__nav_4_8" checked>
+      
+      <label class="md-nav__link" for="__nav_4_8">
+        Interceptor
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Interceptor" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_8">
+          <span class="md-nav__icon md-icon"></span>
+          Interceptor
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schema/" class="md-nav__link">
+        schema
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          transformer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        transformer
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    Use Cases
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#action" class="md-nav__link">
+    action
+  </a>
+  
+    <nav class="md-nav" aria-label="action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-fields" class="md-nav__link">
+    Common fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addkey-value" class="md-nav__link">
+    add(key, value)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copyfrom-to" class="md-nav__link">
+    copy(from, to)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#movefrom-to" class="md-nav__link">
+    move(from, to)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setkey-value" class="md-nav__link">
+    set(key, value)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delkey1-key2" class="md-nav__link">
+    del(key1, key2...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#underrootkey" class="md-nav__link">
+    underRoot(key)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fmtkey" class="md-nav__link">
+    fmt(key)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timestampkey" class="md-nav__link">
+    timestamp(key)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regexkey" class="md-nav__link">
+    regex(key)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jsondecodekey" class="md-nav__link">
+    jsonDecode(key)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strconvkey-type" class="md-nav__link">
+    strconv(key, type)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#print" class="md-nav__link">
+    print()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return" class="md-nav__link">
+    return()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dropevent" class="md-nav__link">
+    dropEvent()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#condition" class="md-nav__link">
+    condition
+  </a>
+  
+    <nav class="md-nav" aria-label="condition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operator" class="md-nav__link">
+    operator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equalkey-target" class="md-nav__link">
+    equal(key, target)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containkey-target" class="md-nav__link">
+    contain(key, target)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#existkey" class="md-nav__link">
+    exist(key)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#greaterkey-target" class="md-nav__link">
+    greater(key, target)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lesskey-target" class="md-nav__link">
+    less(key, target)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasprefixkey-target" class="md-nav__link">
+    hasPrefix(key, target)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matchkey-regex" class="md-nav__link">
+    match(key, regex)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oneofkey-value1-value2" class="md-nav__link">
+    oneOf(key, value1, value2...)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../limit/" class="md-nav__link">
+        rateLimit
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../addk8smeta/" class="md-nav__link">
+        addK8sMeta
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logalert/" class="md-nav__link">
+        logAlert
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metrics/" class="md-nav__link">
+        metrics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../retry/" class="md-nav__link">
+        retry
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../maxbytes/" class="md-nav__link">
+        maxbytes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../normalize/" class="md-nav__link">
+        normalize
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_9" type="checkbox" id="__nav_4_9" >
+      
+      <label class="md-nav__link" for="__nav_4_9">
+        Queue
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Queue" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_9">
+          <span class="md-nav__icon md-icon"></span>
+          Queue
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../queue/channel/" class="md-nav__link">
+        channel
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../queue/memory/" class="md-nav__link">
+        memory
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_10" type="checkbox" id="__nav_4_10" >
+      
+      <label class="md-nav__link" for="__nav_4_10">
+        Monitor
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Monitor" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_10">
+          <span class="md-nav__icon md-icon"></span>
+          Monitor
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../monitor/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../monitor/filesource/" class="md-nav__link">
+        filesource
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../monitor/filewatcher/" class="md-nav__link">
+        filewatcher
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../monitor/reload/" class="md-nav__link">
+        reload
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../monitor/sink/" class="md-nav__link">
+        sink
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../monitor/queue/" class="md-nav__link">
+        queue
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../monitor/logalert/" class="md-nav__link">
+        logAlert
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../monitor/sys/" class="md-nav__link">
+        sys
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Contributing
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Contributing" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Contributing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../developer-guide/contributing/" class="md-nav__link">
+        Contributing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../developer-guide/development/" class="md-nav__link">
+        Local Development
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../developer-guide/code/coding-guide/" class="md-nav__link">
+        Specification
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../developer-guide/component/component-guide/" class="md-nav__link">
+        Component Development
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../developer-guide/release/" class="md-nav__link">
+        Release Process
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    Use Cases
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#action" class="md-nav__link">
+    action
+  </a>
+  
+    <nav class="md-nav" aria-label="action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-fields" class="md-nav__link">
+    Common fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addkey-value" class="md-nav__link">
+    add(key, value)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copyfrom-to" class="md-nav__link">
+    copy(from, to)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#movefrom-to" class="md-nav__link">
+    move(from, to)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setkey-value" class="md-nav__link">
+    set(key, value)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delkey1-key2" class="md-nav__link">
+    del(key1, key2...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#underrootkey" class="md-nav__link">
+    underRoot(key)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fmtkey" class="md-nav__link">
+    fmt(key)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timestampkey" class="md-nav__link">
+    timestamp(key)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regexkey" class="md-nav__link">
+    regex(key)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jsondecodekey" class="md-nav__link">
+    jsonDecode(key)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strconvkey-type" class="md-nav__link">
+    strconv(key, type)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#print" class="md-nav__link">
+    print()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return" class="md-nav__link">
+    return()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dropevent" class="md-nav__link">
+    dropEvent()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#condition" class="md-nav__link">
+    condition
+  </a>
+  
+    <nav class="md-nav" aria-label="condition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operator" class="md-nav__link">
+    operator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equalkey-target" class="md-nav__link">
+    equal(key, target)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containkey-target" class="md-nav__link">
+    contain(key, target)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#existkey" class="md-nav__link">
+    exist(key)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#greaterkey-target" class="md-nav__link">
+    greater(key, target)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lesskey-target" class="md-nav__link">
+    less(key, target)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasprefixkey-target" class="md-nav__link">
+    hasPrefix(key, target)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matchkey-regex" class="md-nav__link">
+    match(key, regex)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oneofkey-value1-value2" class="md-nav__link">
+    oneOf(key, value1, value2...)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/loggie-io/docs-en/tree/main/docs/reference/pipelines/interceptor/transformer.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="transformer">transformer<a class="headerlink" href="#transformer" title="Permanent link">&para;</a></h1>
+<p>Used to perform functional data processing conditional judgement.<br />
+Source interceptor.</p>
+<h2 id="use-cases">Use Cases<a class="headerlink" href="#use-cases" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Extracts the log level and drops the DEBUG log.</li>
+<li>Check whether the log is in json form when logs in both json and plain form are mixed. </li>
+<li>Add different topic topics according to the status code in log.</li>
+<li>...</li>
+</ul>
+<p>See <a href="https://github.com/loggie-io/loggie/blob/main/pkg/interceptor/transformer/example/pipeline.yml">reference</a>.</p>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<p>The transformer will execute all actions in order in the configured actions. The action is similar to the function, and parameters can be written. The parameters are generally fields in the event.
+Each action may also include additional fields. Take the following regex(body) for example, body is the parameter of regex, and pattern is an extra field.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">interceptors</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transformer</span>
+<span class="w">    </span><span class="nt">actions</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">regex(body)</span>
+<span class="w">        </span><span class="nt">pattern</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">^(?P&lt;time&gt;[^ ^Z]+Z) (?P&lt;level&gt;[^ ]*) (?P&lt;log&gt;.*)$</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">add(topic, common)</span>
+</code></pre></div>
+<p>In addition, action also supports <code>if-then-else</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;condition&gt;</span>
+<span class="w">  </span><span class="nt">then</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">funcA()</span>
+<span class="w">  </span><span class="nt">else</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">funcB()</span>
+</code></pre></div>
+<p>Condition is also in the form of a function.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">interceptors</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transformer</span>
+<span class="w">    </span><span class="nt">actions</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">equal(status, 404)</span>
+<span class="w">        </span><span class="nt">then</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">add(topic, not_found)</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">return()</span>
+</code></pre></div>
+<h2 id="action">action<a class="headerlink" href="#action" title="Permanent link">&para;</a></h2>
+<h3 id="common-fields">Common fields<a class="headerlink" href="#common-fields" title="Permanent link">&para;</a></h3>
+<ul>
+<li>ignoreError: Indicates whether to ignore and print errors during the processing of this action.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transformer</span>
+<span class="w">  </span><span class="nt">actions</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">regex(body)</span>
+<span class="w">      </span><span class="nt">pattern</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(?&lt;ip&gt;\S+) (?&lt;id&gt;\S+) (?&lt;u&gt;\S+) (?&lt;time&gt;\[.*?\]) (?&lt;url&gt;\&quot;.*?\&quot;) (?&lt;status&gt;\S+) (?&lt;size&gt;\S+)</span>
+<span class="w">      </span><span class="nt">ignoreError</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+The ignoreError here is set to true, which means that the regular matching error will be ignored, and subsequent actions will continue to be executed.</p>
+</div>
+<h3 id="addkey-value">add(key, value)<a class="headerlink" href="#addkey-value" title="Permanent link">&para;</a></h3>
+<p>Add additional key:value to the event.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">add(topic, loggie)</span>
+</code></pre></div>
+<p>input:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-02-16T09:21:20.545525544Z DEBUG this is log body&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>output:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-02-16T09:21:20.545525544Z DEBUG this is log body&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;topic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;loggie&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</div>
+<h3 id="copyfrom-to">copy(from, to)<a class="headerlink" href="#copyfrom-to" title="Permanent link">&para;</a></h3>
+<p>Copy the fields in the event.</p>
+<p>parameter:</p>
+<ul>
+<li>from: original key</li>
+<li>to: new key</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">copy(foo, bar)</span>
+</code></pre></div>
+<p>input:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-02-16T09:21:20.545525544Z DEBUG this is log body&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;loggie&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>output:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-02-16T09:21:20.545525544Z DEBUG this is log body&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;loggie&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;bar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;loggie&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</div>
+<h3 id="movefrom-to">move(from, to)<a class="headerlink" href="#movefrom-to" title="Permanent link">&para;</a></h3>
+<p>Move/rename fields.</p>
+<p>parameter:</p>
+<ul>
+<li>from: original key</li>
+<li>to: new key</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">move(foo, bar)</span>
+</code></pre></div>
+<p>input:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-02-16T09:21:20.545525544Z DEBUG this is log body&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;loggie&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>output:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-02-16T09:21:20.545525544Z DEBUG this is log body&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;bar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;loggie&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</div>
+<h3 id="setkey-value">set(key, value)<a class="headerlink" href="#setkey-value" title="Permanent link">&para;</a></h3>
+<p>Update the value of key to be value.</p>
+<p>parameter:</p>
+<ul>
+<li>key: the field to be updated</li>
+<li>value: new value</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">set(foo, test)</span>
+</code></pre></div>
+<p>input:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-02-16T09:21:20.545525544Z DEBUG this is log body&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;loggie&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>output:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-02-16T09:21:20.545525544Z DEBUG this is log body&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;test&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</div>
+<h3 id="delkey1-key2">del(key1, key2...)<a class="headerlink" href="#delkey1-key2" title="Permanent link">&para;</a></h3>
+<p>Delete fields. Multiple field keys can be filled in.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">del(foo)</span>
+</code></pre></div>
+<p>input:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-02-16T09:21:20.545525544Z DEBUG this is log body&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;loggie&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>output:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-02-16T09:21:20.545525544Z DEBUG this is log body&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</div>
+<h3 id="underrootkey">underRoot(key)<a class="headerlink" href="#underrootkey" title="Permanent link">&para;</a></h3>
+<p>Put nested fields at the root (outermost).</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">underRoot(state)</span>
+</code></pre></div>
+<p>input:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-02-16T09:21:20.545525544Z DEBUG this is log body&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;node&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;phase&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;running&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>output:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-02-16T09:21:20.545525544Z DEBUG this is log body&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;node&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;phase&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;running&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</div>
+<h3 id="fmtkey">fmt(key)<a class="headerlink" href="#fmtkey" title="Permanent link">&para;</a></h3>
+<p>Generate a value based on other field values. If the key does not exist, the field will be added.</p>
+<p>Extra fields:</p>
+<ul>
+<li>pattern: Required, indicating formatting rules, eg <code>${state.node}-${state.phase}</code>. If pattern is a fixed value, the action is similar to set(key, value).</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fmt(status)</span>
+<span class="w">  </span><span class="nt">pattern</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${state.node} is ${state.phase}</span>
+</code></pre></div>
+<p>input:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-02-16T09:21:20.545525544Z DEBUG this is log body&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;node&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;phase&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;running&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>output:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-02-16T09:21:20.545525544Z DEBUG this is log body&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;node&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;phase&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;running&quot;</span>
+<span class="w">  </span><span class="p">}</span><span class="err">，</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1 is running&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</div>
+<h3 id="timestampkey">timestamp(key)<a class="headerlink" href="#timestampkey" title="Permanent link">&para;</a></h3>
+<p>Time format conversion.</p>
+<p>Extra fields:</p>
+<ul>
+<li>fromLayout: required, specifies the time format of the field (golang form), and can also be <code>unix</code> and <code>unix_ms</code>.</li>
+<li>fromLocation: specifies the time zone of the field. <code>UTC</code> and <code>Local</code> also supported. If empty, <code>UTC</code> is used.</li>
+<li>toLayout: required, the converted time format (golang form), and can also be <code>unix</code> and <code>unix_ms</code>. </li>
+<li>toLocation: the converted time zone. <code>UTC</code> and <code>Local</code> also supported. If empty, <code>UTC</code> is used.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">timestamp(time)</span>
+<span class="w">  </span><span class="nt">fromLayout</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2006-01-02</span><span class="nv"> </span><span class="s">15:04:05&quot;</span>
+<span class="w">  </span><span class="nt">fromLocation</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Asia/Shanghai</span>
+<span class="w">  </span><span class="nt">toLayout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unix_ms</span>
+<span class="w">  </span><span class="nt">toLocation</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Local</span>
+</code></pre></div>
+<p>input:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-02-16T09:21:20.545525544Z DEBUG this is log body&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-06-28 11:24:35&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>output:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-02-16T09:21:20.545525544Z DEBUG this is log body&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1656386675000</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</div>
+<p>For time in golang form, please refer to:
+<div class="highlight"><pre><span></span><code>const (
+    Layout      = &quot;01/02 03:04:05PM &#39;06 -0700&quot; // The reference time, in numerical order.
+    ANSIC       = &quot;Mon Jan _2 15:04:05 2006&quot;
+    UnixDate    = &quot;Mon Jan _2 15:04:05 MST 2006&quot;
+    RubyDate    = &quot;Mon Jan 02 15:04:05 -0700 2006&quot;
+    RFC822      = &quot;02 Jan 06 15:04 MST&quot;
+    RFC822Z     = &quot;02 Jan 06 15:04 -0700&quot; // RFC822 with numeric zone
+    RFC850      = &quot;Monday, 02-Jan-06 15:04:05 MST&quot;
+    RFC1123     = &quot;Mon, 02 Jan 2006 15:04:05 MST&quot;
+    RFC1123Z    = &quot;Mon, 02 Jan 2006 15:04:05 -0700&quot; // RFC1123 with numeric zone
+    RFC3339     = &quot;2006-01-02T15:04:05Z07:00&quot;
+    RFC3339Nano = &quot;2006-01-02T15:04:05.999999999Z07:00&quot;
+    Kitchen     = &quot;3:04PM&quot;
+    // Handy time stamps.
+    Stamp      = &quot;Jan _2 15:04:05&quot;
+    StampMilli = &quot;Jan _2 15:04:05.000&quot;
+    StampMicro = &quot;Jan _2 15:04:05.000000&quot;
+    StampNano  = &quot;Jan _2 15:04:05.000000000&quot;
+)
+</code></pre></div>
+It can also be modified according to requirements.  </p>
+<h3 id="regexkey">regex(key)<a class="headerlink" href="#regexkey" title="Permanent link">&para;</a></h3>
+<p>Use regular pattern to segment logs and extract fields. 
+It can also be regex(key, to).</p>
+<p>parameter:</p>
+<ul>
+<li>key: required, the field to be extracted regularly.</li>
+<li>to: optional, the key to which all fields are placed after extraction. The default is empty, which means to extract the field to the root.</li>
+</ul>
+<p>Extra fields:</p>
+<ul>
+<li>pattern: required, regular expression.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">regex(body)</span>
+<span class="w">  </span><span class="nt">pattern</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(?&lt;ip&gt;\S+) (?&lt;id&gt;\S+) (?&lt;u&gt;\S+) (?&lt;time&gt;\[.*?\]) (?&lt;url&gt;\&quot;.*?\&quot;) (?&lt;status&gt;\S+) (?&lt;size&gt;\S+)</span>
+</code></pre></div>
+<p>input:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10.244.0.1 - - [13/Dec/2021:12:40:48 +0000] &#39;GET / HTTP/1.1&#39; 404 683&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>output:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;ip&quot;</span><span class="p">:</span><span class="w">     </span><span class="s2">&quot;10.244.0.1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w">     </span><span class="s2">&quot;-&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;u&quot;</span><span class="p">:</span><span class="w">      </span><span class="s2">&quot;-&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="w">   </span><span class="s2">&quot;[13/Dec/2021:12:40:48 +0000]&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w">    </span><span class="s2">&quot;GET / HTTP/1.1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;404&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;size&quot;</span><span class="p">:</span><span class="w">   </span><span class="s2">&quot;683&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</div>
+<h3 id="jsondecodekey">jsonDecode(key)<a class="headerlink" href="#jsondecodekey" title="Permanent link">&para;</a></h3>
+<p>Deserialize json text. 
+Can also be jsonDecode(key, to).</p>
+<p>parameter:</p>
+<ul>
+<li>key: required, the corresponding field key.</li>
+<li>to: optional, the key to which all fields are placed after extraction. The default is empty, which means to extract the field to the root.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jsonDecode(body)</span>
+</code></pre></div>
+<p>input:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">`</span><span class="p">{</span><span class="nt">&quot;log&quot;</span><span class="p">:</span><span class="s2">&quot;I0610 08:29:07.698664 Waiting for caches to sync&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;stream&quot;</span><span class="p">:</span><span class="s2">&quot;stderr&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="s2">&quot;2021-06-10T08:29:07.698731204Z&quot;</span><span class="p">}</span><span class="err">`</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>output:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;log&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;I0610 08:29:07.698664 Waiting for caches to sync&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;stream&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;stderr&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">  </span><span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-06-10T08:29:07.698731204Z&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</div>
+<h3 id="strconvkey-type">strconv(key, type)<a class="headerlink" href="#strconvkey-type" title="Permanent link">&para;</a></h3>
+<p>Value type conversion.</p>
+<p>parameter:</p>
+<ul>
+<li>key: target field</li>
+<li>type: the converted type, which can be <code>bool</code>, <code>int</code>, <code>float</code></li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">strconv(code, int)</span>
+</code></pre></div>
+<p>input:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-02-16T09:21:20.545525544Z DEBUG this is log body&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;200&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>output:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-02-16T09:21:20.545525544Z DEBUG this is log body&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</div>
+<h3 id="print">print()<a class="headerlink" href="#print" title="Permanent link">&para;</a></h3>
+<p>Print event. Generally used in the debugging phase.</p>
+<h3 id="return">return()<a class="headerlink" href="#return" title="Permanent link">&para;</a></h3>
+<p>Control function. Interceptor returns when executing return(), and does not continue to execute the following action.</p>
+<h3 id="dropevent">dropEvent()<a class="headerlink" href="#dropevent" title="Permanent link">&para;</a></h3>
+<p>Control function. Interceptor drops event when executing dropEvent(), which means that the piece of data will be lost and will not continue to be processed and consumed by subsequent interceptors or sinks.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><div class="highlight"><pre><span></span><code><span class="nt">interceptors</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transformer</span>
+<span class="w">    </span><span class="nt">actions</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">regex(body)</span>
+<span class="w">        </span><span class="nt">pattern</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">^(?P&lt;time&gt;[^ ^Z]+Z) (?P&lt;level&gt;[^ ]*) (?P&lt;log&gt;.*)$</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">equal(level, DEBUG)</span>
+<span class="w">        </span><span class="nt">then</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dropEvent()</span>
+</code></pre></div>
+Assuming that the log is: <code>2021-02-16T09:21:20.545525544Z DEBUG this is log body</code>.If the level field is DEBUG, the log will be discarded directly.</p>
+</div>
+<h2 id="condition">condition<a class="headerlink" href="#condition" title="Permanent link">&para;</a></h2>
+<p>Conditional function.</p>
+<h3 id="operator">operator<a class="headerlink" href="#operator" title="Permanent link">&para;</a></h3>
+<ul>
+<li>AND: Indicates the <code>and</code> result of two conditions</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nt">interceptors</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transformer</span>
+<span class="w">    </span><span class="nt">actions</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">equal(level, DEBUG) AND equal(code, 200)</span>
+<span class="w">        </span><span class="nt">then</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dropEvent()</span>
+</code></pre></div>
+</div>
+<ul>
+<li>OR：Indicates the <code>or</code> result of two conditions</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nt">interceptors</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transformer</span>
+<span class="w">    </span><span class="nt">actions</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">equal(level, DEBUG) OR equal(level, INFO)</span>
+<span class="w">        </span><span class="nt">then</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dropEvent()</span>
+</code></pre></div>
+</div>
+<ul>
+<li>NOT: Indicates the <code>not</code> result of the condition</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nt">interceptors</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transformer</span>
+<span class="w">    </span><span class="nt">actions</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NOT equal(level, DEBUG)</span>
+<span class="w">        </span><span class="nt">then</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dropEvent()</span>
+</code></pre></div>
+</div>
+<h3 id="equalkey-target">equal(key, target)<a class="headerlink" href="#equalkey-target" title="Permanent link">&para;</a></h3>
+<p>Whether the value of field is equal to target.</p>
+<h3 id="containkey-target">contain(key, target)<a class="headerlink" href="#containkey-target" title="Permanent link">&para;</a></h3>
+<p>Whether the value of field contains target.</p>
+<h3 id="existkey">exist(key)<a class="headerlink" href="#existkey" title="Permanent link">&para;</a></h3>
+<p>Whether the field exists or is empty.</p>
+<h3 id="greaterkey-target">greater(key, target)<a class="headerlink" href="#greaterkey-target" title="Permanent link">&para;</a></h3>
+<p>Whether the value of field is greater than targrt.</p>
+<h3 id="lesskey-target">less(key, target)<a class="headerlink" href="#lesskey-target" title="Permanent link">&para;</a></h3>
+<p>Whether the value of field is less than targrt.</p>
+<h3 id="hasprefixkey-target">hasPrefix(key, target)<a class="headerlink" href="#hasprefixkey-target" title="Permanent link">&para;</a></h3>
+<p>Whether the value of field contains the target prefix.</p>
+<h3 id="matchkey-regex">match(key, regex)<a class="headerlink" href="#matchkey-regex" title="Permanent link">&para;</a></h3>
+<p>Whether the value of field matches regex.</p>
+<h3 id="oneofkey-value1-value2">oneOf(key, value1, value2...)<a class="headerlink" href="#oneofkey-value1-value2" title="Permanent link">&para;</a></h3>
+<p>Whether the value of field is one of the value1 ​​value2...</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../schema/" class="md-footer__link md-footer__link--prev" aria-label="Previous: schema" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              schema
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../limit/" class="md-footer__link md-footer__link--next" aria-label="Next: rateLimit" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              rateLimit
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2022 Loggie.io
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/loggie-io" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://hub.docker.com/r/loggieio/loggie" target="_blank" rel="noopener" title="hub.docker.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M349.9 236.3h-66.1v-59.4h66.1v59.4zm0-204.3h-66.1v60.7h66.1V32zm78.2 144.8H362v59.4h66.1v-59.4zm-156.3-72.1h-66.1v60.1h66.1v-60.1zm78.1 0h-66.1v60.1h66.1v-60.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1l-13.3-8.9zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm-78.1-72.1h-66.1v60.1h66.1v-60.1z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.sections", "search.highlight", "search.share", "search.suggest", "navigation.tabs", "navigation.tracking", "navigation.tabs.sticky", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.409db549.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.56a63758.min.js"></script>
+      
+    
+  </body>
+</html>
